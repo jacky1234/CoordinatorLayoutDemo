@@ -2,14 +2,13 @@ package com.example.zcp.coordinatorlayoutdemo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.zcp.coordinatorlayoutdemo.R;
 
@@ -22,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,10 +30,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.my_fork_sample).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MyForkSamples.class);
+                startActivity(intent);
+            }
+        });
+
         findViewById(R.id.my_behavior_bt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,MyBehaviorActivity.class);
+                Intent intent = new Intent(MainActivity.this, MyBehaviorActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.bottom_sheet_bt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,BottomSheetActivity.class);
+                Intent intent = new Intent(MainActivity.this, BottomSheetActivity.class);
                 startActivity(intent);
             }
         });
