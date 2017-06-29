@@ -28,6 +28,13 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical">
+
+        <Button
+            android:id="@+id/my_fork_sample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="myForkSample"/>
+
         <Button
             android:id="@+id/my_behavior_bt"
             android:layout_width="wrap_content"
