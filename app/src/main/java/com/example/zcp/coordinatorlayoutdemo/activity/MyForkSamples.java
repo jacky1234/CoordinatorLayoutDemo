@@ -24,6 +24,7 @@ import com.example.zcp.coordinatorlayoutdemo.activity.fragment.SampleFragment2;
  */
 
 public class MyForkSamples extends AppCompatActivity {
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
