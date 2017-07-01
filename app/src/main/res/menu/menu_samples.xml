@@ -17,4 +17,16 @@
             android:title="behavior_sample2"
             app:showAsAction="never"></item>
     </group>
+
+    <group
+        android:id="@+id/group_nest_scrolling"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nest_sample1"
+            android:orderInCategory="100"
+            android:title="behavior_nest1"
+            app:showAsAction="never"></item>
+
+    </group>
 </menu>

@@ -2,12 +2,14 @@ package com.example.zcp.coordinatorlayoutdemo.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.zcp.coordinatorlayoutdemo.R;
+import com.example.zcp.coordinatorlayoutdemo.activity.fragment.NestFragment1;
 import com.example.zcp.coordinatorlayoutdemo.activity.fragment.SampleFragment1;
 import com.example.zcp.coordinatorlayoutdemo.activity.fragment.SampleFragment2;
 
@@ -18,7 +20,7 @@ import com.example.zcp.coordinatorlayoutdemo.activity.fragment.SampleFragment2;
  * qq:[847564732]
  *
  * @author yangjianfei
- * @description:
+ * @description:NestedScrolling practise
  */
 
 public class MyForkSamples extends AppCompatActivity {
@@ -38,15 +40,21 @@ public class MyForkSamples extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getGroupId()){
+        switch (item.getGroupId()) {
             case R.id.group_behavior:
                 //group_behavior
                 switch (item.getItemId()) {
                     case R.id.behavior_sample1:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container, new SampleFragment1()).commit();
+                        replace(new SampleFragment1());
                         break;
                     case R.id.behavior_sample2:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container, new SampleFragment2()).commit();
+                        replace(new SampleFragment2());
+                        break;
+                }
+            case R.id.group_nest_scrolling:
+                switch (item.getItemId()) {
+                    case R.id.nest_sample1:
+                        replace(new NestFragment1());
                         break;
                 }
                 break;
@@ -54,6 +62,10 @@ public class MyForkSamples extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void replace(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
     }
 
     @Override
