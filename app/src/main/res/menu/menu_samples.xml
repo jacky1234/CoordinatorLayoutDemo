@@ -4,7 +4,6 @@
     <group
         android:id="@+id/group_behavior"
         android:checkableBehavior="single">
-
         <item
             android:id="@+id/behavior_sample1"
             android:orderInCategory="100"
@@ -25,7 +24,7 @@
         <item
             android:id="@+id/nest_sample1"
             android:orderInCategory="100"
-            android:title="behavior_nest1"
+            android:title="nestscroll_sample1"
             app:showAsAction="never"></item>
 
     </group>
